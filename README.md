@@ -1,8 +1,12 @@
 # comp220-journal
 Base repository for COMP220 assignment #2 (Research Journal)
 
+##Academic Papers are Referenced in Latex Document.
 
-###Online References used to improve code
+
+###Other online References used to improve code:
+
+http://cs.nyu.edu/~perlin/noise/
 
 https://sites.google.com/site/letsmakeavoxelengine/
 
