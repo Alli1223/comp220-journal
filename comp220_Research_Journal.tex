@@ -14,7 +14,7 @@
 \graphicspath{ {./images/} }
 
 % Please include a clear, concise, and descriptive title
-\title{Title Here} 
+\title{Graphics Research Journal} 
 
 % Please do not change the subtitle
 \subtitle{COMP220- Research Journal}
@@ -29,15 +29,17 @@
 \abstract{}
 
 \section{Introduction}
-For my graphics and simulation project I have chosen to make a voxel based game, where the player is a light source that will light up the surrounding terrain. The terrain will be generated using perlin noise to change the height of the ground.
-
+For my graphics and simulation project I have chosen to make a voxel based game, where the player is a light source that will light up the terrain. The terrain will be generated using perlin noise to change the height of the ground.
 
 
 \textbf{Paper One:}
-Ken Perlin paper on perlin noise
-
 Perlin Noise Pixel Shaders
 \cite{hart2001perlin}
+\par
+
+This paper demonstrates how they used procedural shading techniques to compute high resolution textures efficiently in real time. This means that materials like wood and stone can be generated using procedural texturing to quickly produce dynamic animated enviroments.
+
+They use the perlin noise function to generate these procedural shading techniques \cite{perlin2002improving}.
 
 \par
 
@@ -46,7 +48,8 @@ Improving Noise
 \cite{perlin2002improving}
 \par
 
-This paper is what I used to implement the perlin noise algorithm into my project.
+This paper is what I used to implement the perlin noise algorithm into my project. It work by calculating a random vector for each of the nearest verticies in a cube.
+This paper is improving upon his last paper.
 
 \par 
 
@@ -65,8 +68,12 @@ Dual/primal mesh optimization for polygonized implicit surfaces
 Illumination for computer generated pictures
 \cite{phong1975illumination}
 \par
-This paper 
 
+This paper was published in June 1975, so it is fairly dated now, but the principles behind it still work fine for todays standsards. However there are improved lighting models, but are generally more complex.
+
+Phong calculates the normals of the triangles in the 
+
+\par
 \textbf{Paper Six:}
 An improved illumination model for shaded display
 \cite{whitted2005improved}
@@ -77,6 +84,9 @@ Texturing techniques for terrain visualization
 \cite{dollner2000texturing}
 \par
 
+\textbf{Paper Eight:}
+Hypertexture
+\cite{perlin1989hypertexture}
 
 
 \bibliographystyle{ieeetr}
