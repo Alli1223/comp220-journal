@@ -13,3 +13,5 @@ https://sites.google.com/site/letsmakeavoxelengine/
 http://www.tomdalling.com/blog/modern-opengl/07-more-lighting-ambient-specular-attenuation-gamma/
 
 http://www.opengl-tutorial.org/beginners-tutorials/tutorial-8-basic-shading/
+
+http://www.tomdalling.com/blog/modern-opengl/06-diffuse-point-lighting/
