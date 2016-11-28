@@ -29,45 +29,82 @@
 \abstract{}
 
 \section{Introduction}
-For my graphics and simulation project I have chosen to make a voxel based game, where the player is a light source that will light up the terrain. The terrain will be generated using perlin noise \cite{perlin1985image} to change the height of the ground.
-%An overview of what the paper is about
+This paper will be covering three different game components that went into the Graphics and Simulation project. 
+These components are \textit{Procedural Terrain Generation}, \textit{Optimisation of Complex Meshes} and \textit{Illumination}.
 
-\textbf{Paper One:}
-Perlin Noise Pixel Shaders
-\cite{hart2001perlin}
+
+% Topics
+%: Why is the paper significant and/or influential?
+% Why did the researchers choose the approach that they did?
+%Is there anything counterintuitive or surprising in the paper?
+% Do you disagree with any of the assumptions or claims it makes?
+% Does the paper suggest any further research questions?
+
+
+\section{Procedural Terrain Generation}
+
+\subsection{An Image Synthesizer \cite{perlin1985image}}
 \par
 
-This paper demonstrates how they used procedural shading techniques to compute high resolution textures efficiently in real time. This means that materials like wood and stone can be generated using procedural texturing to quickly produce dynamic animated enviroments.
-
-They use the perlin noise function to generate these procedural shading techniques \cite{perlin2002improving}. The paper also illustrates the pros and cons of generating the noise algorithm on different graphics hardware.
-
+This paper by ken perlin has been influential to the generation of more realistic Computer Generated Imagery (CGI) as it has cited over 1900 times and has been integrated into various software packages such as Autodesk \textit{Maya} and \textit{3D Studio Max} \cite{PerlinWebsite}.
 \par
 
+This paper describes the concept of a ``Pixel Stream Editor'' (PSE) which lets designes work with a high level programming enviroment to produce realistic CGI.
+
+The PSE allows operations to be performed asynchronously at different pixels, which means that this computation can be performed on a Graphics Processing Unit to speed up rendering times.
+
+However this paper has been improved upon in his paper \textit{Improving Noise} \cite{perlin2002improving}.
 
 
+\subsection{Improving Noise \cite{perlin2002improving}}
+This paper revises some issues that arose in his previous paper that was introduced 17 years before. 
+The original noise algorithm suffered from two defects; 
 
-\textbf{Paper Two:}
-Improving Noise
-\cite{perlin2002improving}
-\par
+\begin{itemize}
+\item {Discontinuity across coordinate-aligned integer boundaries.}
+\item  {An expensive and problematic method of computing the gradient.}
+\end{itemize}
 
-This paper is what I used to implement the perlin noise algorithm into my project. It work by calculating a random vector for each of the nearest verticies in a cube.
-This paper is improves upon his previous paper \textit{An Image Synthesizer} \cite{perlin1985image}.
-
+Both these issues were removed in the improved algorithm proposed in this paper.
 \par 
 
 
+\subsection{Hypertexture \cite{perlin1989hypertexture}}
+
+This paper focuses on the rendering of an intermediate region between object and non-object called ``Hypertexture''.  Examples of this can be complex 3D textures such as hair, fur or smoke.
+This paper is based of Ken Perlins previous paper \cite{perlin1985image}.
+
+ Hypertexture objects have no well defined boundaries, the paper proposes a function that describes how the objects texture transitions between the outside and inside of the object.
 
 
 
-\textbf{Paper Three:}
-The Multilevel Finite Element Method for Adaptive Mesh
-Optimization and Visualization of Volume Data
+
+
+
+
+
+
+
+
+
+\section{Optimization}
+
+\subsection{Perlin Noise Pixel Shaders}
+\cite{hart2001perlin}
+\par
+
+This paper demonstrates how they used procedural shading techniques to compute high resolution textures efficiently in real time. This means that materials like wood and stone can be generated using procedural texturing to quickly produce dynamic animated environments.
+
+They use the perlin noise function to generate these procedural shading techniques \cite{perlin2002improving}. The paper also illustrates the pros and cons of generating the noise algorithm on different graphics hardware.
+\par
+
+\subsection{The Multilevel Finite Element Method for Adaptive Mesh
+Optimization and Visualization of Volume Data}
+
 \cite{grosso1997multilevel}
 \par
 
 This paper is about optimising a 2 or 3 dimensional mesh. 
-
 
 Rendering large amounts  of geometric primitives (i.e. cubes or spheres etc..) can be very compute intensive, this paper presents two algorithms that show significantly increased rendering quality and speed of these geometic primitives from large datasets.
 
@@ -85,32 +122,40 @@ Other Papers on this:
 
 
 
-\textbf{Paper Four:}
-Dual/primal mesh optimization for polygonized implicit surfaces
-\cite{ohtake2002dual}
+
+
+
+
+
+
+
+\section{Illumination}
+\textbf{Illumination for computer generated pictures \cite{phong1975illumination}}
+
+This paper was published in June 1975, but the principles behind it still work well for 3D video game graphics, where performance is important. However for more realistic lighting effects for 3D Design, ray tracing is a slower, but more accurate solution to complex 3D lighting \cite{Shirley:2005:RayTracing}.
+
+Phong's paper breaks up the lighting calculations into three separate parts; \textit{specular reflection}, \textit{diffuse} and \textit{ambient}.
+
+
+
+%\subsection{Dual/primal mesh optimization for polygonized implicit surfaces \cite{ohtake2002dual}}
+
+
+
+\subsection{An improved illumination model for shaded display \cite{whitted2005improved}}
+
+This paper presents a shading model that uses global information to calculate intensities, then provides extensions to the ray tracing visible surface algorithm. 
+This paper builds upon the work done by Phong \cite{phong1975illumination} and Blinn \cite{Blinn1977}. It has improved the lighing effects, however it does still have a few issues.
+
+``When better ways of using picture coherence
+to speed the display process are found, this algorithm
+may find use in the generation of realistic animated
+sequences.''
+
+
+
+
 \par
-
-\textbf{Paper Five:}
-Illumination for computer generated pictures
-\cite{phong1975illumination}
-\par
-
-This paper was published in June 1975, so it is fairly dated now, but the principles behind it still work fine for todays standsards. However there are improved lighting models, but are generally more complex.
-
-
-
-
-
-
-\par
-\textbf{Paper Six:}
-An improved illumination model for shaded display
-\cite{whitted2005improved}
-\par
-
-
-
-
 
 \textbf{Paper Seven:}
 Texturing techniques for terrain visualization
@@ -118,23 +163,8 @@ Texturing techniques for terrain visualization
 \par
 
 
-
-
-
-\textbf{Paper Eight:}
-Hypertexture
-\cite{perlin1989hypertexture}
 \par
 
-Another paper by Ken Perlin.
-
-\par
-\textbf{Paper Nine:}
-An Image Synthesizer
-\cite{perlin1985image}
-\par
-
-The original paper by ken perlin, this paper has been cited over 1900 times.
 
 \bibliographystyle{ieeetr}
 \bibliography{comp220_Research_Journal}
