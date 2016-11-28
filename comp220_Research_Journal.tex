@@ -80,33 +80,21 @@ This paper is based of Ken Perlins previous paper \cite{perlin1985image}.
 
 
 
-
-
-
-
-
-
-
 \section{Optimization}
 
-\subsection{Perlin Noise Pixel Shaders}
-\cite{hart2001perlin}
-\par
+\subsection{Perlin Noise Pixel Shaders \cite{hart2001perlin}}
 
 This paper demonstrates how they used procedural shading techniques to compute high resolution textures efficiently in real time. This means that materials like wood and stone can be generated using procedural texturing to quickly produce dynamic animated environments.
 
 They use the perlin noise function to generate these procedural shading techniques \cite{perlin2002improving}. The paper also illustrates the pros and cons of generating the noise algorithm on different graphics hardware.
 \par
 
-\subsection{The Multilevel Finite Element Method for Adaptive Mesh
-Optimization and Visualization of Volume Data}
+\subsection{The Multilevel Finite Element Method for Adaptive Mesh Optimization and Visualization of Volume Data \cite{grosso1997multilevel}}
 
-\cite{grosso1997multilevel}
-\par
 
-This paper is about optimising a 2 or 3 dimensional mesh. 
+This paper is about optimizing a 2 or 3 dimensional mesh. 
 
-Rendering large amounts  of geometric primitives (i.e. cubes or spheres etc..) can be very compute intensive, this paper presents two algorithms that show significantly increased rendering quality and speed of these geometic primitives from large datasets.
+Rendering large amounts  of geometric primitives (i.e. cubes or spheres etc..) can be very compute intensive, this paper presents two algorithms that show significantly increased rendering quality and speed of these geometric primitives from large datasets.
 
 It does this by generating approximate meshes and then refining the meshes iteratively. 
 
@@ -138,19 +126,15 @@ Phong's paper breaks up the lighting calculations into three separate parts; \te
 
 
 
-%\subsection{Dual/primal mesh optimization for polygonized implicit surfaces \cite{ohtake2002dual}}
-
+\subsection{Models of Light Reflection for Computer Synthesized Pictures \cite{Blinn1977}}
+This paper by Blinn builds upon Phongs paper \cite{phong1975illumination}. As it has ``a noticle effect primarly for non-metallic and edge lit objects'' \cite{Blinn1977}. 
 
 
 \subsection{An improved illumination model for shaded display \cite{whitted2005improved}}
 
 This paper presents a shading model that uses global information to calculate intensities, then provides extensions to the ray tracing visible surface algorithm. 
-This paper builds upon the work done by Phong \cite{phong1975illumination} and Blinn \cite{Blinn1977}. It has improved the lighing effects, however it does still have a few issues.
+This paper builds upon the work done by Phong \cite{phong1975illumination} and Blinn \cite{Blinn1977}. It has improved the lighing effects, however it not perfect.
 
-``When better ways of using picture coherence
-to speed the display process are found, this algorithm
-may find use in the generation of realistic animated
-sequences.''
 
 
 
